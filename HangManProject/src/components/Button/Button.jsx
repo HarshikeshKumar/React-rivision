@@ -1,8 +1,8 @@
-function Button({ text }) {
+function Button({ text, onClickHandler }) {
   // console.log(props);
   return (
     <>
-      <button>{text}</button>
+      <button onClick={onClickHandler}>{text}</button>
     </>
   );
 }

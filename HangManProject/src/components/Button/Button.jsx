@@ -1,10 +1,8 @@
-import "./Button.css";
-
 function Button({ text, onClickHandler }) {
   // console.log(props);
   return (
     <>
-      <button onClick={onClickHandler} className="btn">
+      <button onClick={onClickHandler} className="text-white bg-blue-500">
         {text}
       </button>
     </>

@@ -2,8 +2,13 @@ import Button from "../Button/Button";
 import TextInput from "../TextInput/TextInput";
 
 function TextInputForm() {
+  function onSubmitHandler(event) {
+    event.preventDefault();
+    console.log("Form Submit");
+  }
+
   return (
-    <form>
+    <form onSubmit={onSubmitHandler}>
       <div>
         <TextInput
           label="Enter a worrd or phrese"

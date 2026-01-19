@@ -6,15 +6,14 @@ function TextInputFormContainer() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    console.log("Form Submit");
+    // console.log("Form Submit");
   }
 
   function handleTextInputChange(event) {
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
 
   function handleShowHideClick() {
-    console.log("Show/Hide Button clicked");
     if (inputType === "password") {
       setInputType("text");
     } else {

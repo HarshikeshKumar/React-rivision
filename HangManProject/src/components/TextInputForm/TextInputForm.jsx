@@ -21,7 +21,7 @@ function TextInputForm({
       <div>
         <Button
           styleType="warning"
-          text="Show/Hide"
+          text={inputType === "password" ? "Show" : "Hide"}
           onClickHandler={handleShowHideClick}
         />
       </div>

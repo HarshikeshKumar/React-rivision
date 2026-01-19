@@ -2,7 +2,12 @@ function Button({ text, onClickHandler }) {
   // console.log(props);
   return (
     <>
-      <button onClick={onClickHandler}>{text}</button>
+      <button
+        onClick={onClickHandler}
+        style={{ backgroundColor: "blue", color: "white" }}
+      >
+        {text}
+      </button>
     </>
   );
 }

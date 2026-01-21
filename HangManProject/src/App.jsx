@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import TextInputFormContainer from "./components/TextInputForm/TextInputFormContainer";
+import PlayGame from "./components/pages/PlayGame";
+import StartGame from "./components/pages/StartGame";
 
 function App() {
   return (
     <div>
-      <TextInputFormContainer />
+      <Routes>
+        <Route path="/play" element={<PlayGame />} />
+        <Route path="/start" element={<StartGame />} />
+        <Route path="/" element={<h1>Home</h1>} />
+      </Routes>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function TextInputFormContainer() {
       // setTimeout(() => {
       //   navigate("/play");
       // }, 5000);
-      navigate("/play");
+      navigate(`/play?text=${value}`);
     }
   }
 

@@ -17,6 +17,8 @@ function TextInputFormContainer() {
       // setTimeout(() => {
       //   navigate("/play");
       // }, 5000);
+
+      // If we have something in value then we want to go to the play page
       navigate(`/play`, { state: { wordSelected: value } });
     }
   }

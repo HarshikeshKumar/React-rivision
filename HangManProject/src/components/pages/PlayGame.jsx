@@ -1,15 +1,16 @@
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function PlayGame() {
-  // const params = useSearchParams();
-  // console.log(params);
+  // Data Fetched through Query Params using useSearchParams() Hook
+  // const [searchParams] = useSearchParams();
+  // console.log(searchParams.get("text"));
 
-  const [searchParams] = useSearchParams();
-  console.log(searchParams.get("text"));
+  // Data Fetched through Path Params using useParams() Hook
+  const { text } = useParams();
 
   return (
     <>
-      <h1>Play Game</h1>
+      <h1>Play Game: {text}</h1>
       {/* <a href="/start" className="text-blue-400">
         Start Game Link
       </a> */}

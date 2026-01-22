@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import Maskedtext from "../MaskedText/MaskedText";
 
 function PlayGame() {
   // Data Fetched through Query Params using useSearchParams() Hook
@@ -10,20 +11,14 @@ function PlayGame() {
 
   const { state } = useLocation();
 
-  // let arr = ["Hello", "World"];
-  // let arr = ["<b>Hello</b>", "<h1>World</h1>"];
-  let arr = ["Hello", "World"];
-
   return (
     <>
       <h1>Play Game: {state.wordSelected}</h1>
-      {/* {arr} */}
-      {arr.map((elem, idx) => (
-        <b key={idx}>{elem}</b>
-      ))}
+
       {/* <a href="/start" className="text-blue-400">
         Start Game Link
       </a> */}
+      <Maskedtext text={state.wordSelected} guessedLetters={[]} />
       <Link to="/start" className="text-blue-400">
         Start Game Link
       </Link>

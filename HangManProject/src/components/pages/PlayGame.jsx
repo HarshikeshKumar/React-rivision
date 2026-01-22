@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function PlayGame() {
   // Data Fetched through Query Params using useSearchParams() Hook
@@ -6,11 +6,13 @@ function PlayGame() {
   // console.log(searchParams.get("text"));
 
   // Data Fetched through Path Params using useParams() Hook
-  const { text } = useParams();
+  // const { text } = useParams();
+
+  const { state } = useLocation();
 
   return (
     <>
-      <h1>Play Game: {text}</h1>
+      <h1>Play Game: {state.wordSelected}</h1>
       {/* <a href="/start" className="text-blue-400">
         Start Game Link
       </a> */}

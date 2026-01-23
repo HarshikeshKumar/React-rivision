@@ -6,7 +6,7 @@ function Icon({ name }) {
   } else if (name === "cross") {
     return <FaTimes />;
   } else {
-    <FaPen />;
+    return <FaPen />;
   }
 }
 

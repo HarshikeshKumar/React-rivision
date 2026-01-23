@@ -24,3 +24,4 @@ export function getMaskedString(originalWord, guessedLetters) {
     }); // ['H','_', 'M', '_', '_', 'E']
   return result;
 }
+

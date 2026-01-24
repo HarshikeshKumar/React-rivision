@@ -58,6 +58,10 @@ function PokemonList() {
               <Pokemon name={p.name} image={p.image} key={p.id} />
             ))}
       </div>
+      <div className="controls">
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
     </div>
   );
 }

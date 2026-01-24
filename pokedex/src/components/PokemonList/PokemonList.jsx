@@ -7,7 +7,7 @@ function PokemonList() {
 
   useEffect(() => {
     console.log("Effect Called");
-  }, []);
+  });
 
   return (
     <>

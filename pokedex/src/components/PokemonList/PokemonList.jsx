@@ -1,11 +1,9 @@
 import { useEffect } from "react";
 
 function PokemonList() {
-  useEffect(() => {
-    console.log("Effect Called");
-  }, []);
+  useEffect(() => {}, []);
 
-  return <div>Pokemon List</div>;
+  return <div className="pokemon-list-wrapper">Pokemon List</div>;
 }
 
 export default PokemonList;

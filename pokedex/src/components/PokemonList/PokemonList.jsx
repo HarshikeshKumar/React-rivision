@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import "./PokemonList.css";
 import { useState } from "react";
+import Pokemon from "../Pokemon/Pokemon";
 
 function PokemonList() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -13,6 +14,7 @@ function PokemonList() {
     // console.log(response.data);
     const pokemonResults = response.data.results;
     // console.log(pokemonResults);
+    // console.log(response.data);
     const pokemonResultPromise = pokemonResults.map((pokemon) =>
       axios.get(pokemon.url),
     );
@@ -24,6 +26,7 @@ function PokemonList() {
       const pokemon = pokeData.data;
       // console.log(pokemon);
       return {
+        id: pokemon.id,
         name: pokemon.name,
         image: pokemon.sprites.other
           ? pokemon.sprites.other.dream_world.front_default
@@ -45,7 +48,11 @@ function PokemonList() {
   return (
     <div className="pokemon-list-wrapper">
       <div>Pokemon List</div>
-      {isLoading ? "Loading...." : "Data downloaded"}
+      {isLoading
+        ? "Loading...."
+        : pokemonList.map((p) => (
+            <Pokemon name={p.name} image={p.image} key={p.id} />
+          ))}
     </div>
   );
 }
